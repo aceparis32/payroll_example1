@@ -1,0 +1,6 @@
+D:\Makers\C#\Week3day3\Payroll_1\Payroll_1\bin\Debug\Payroll_1.exe.config
+D:\Makers\C#\Week3day3\Payroll_1\Payroll_1\bin\Debug\Payroll_1.exe
+D:\Makers\C#\Week3day3\Payroll_1\Payroll_1\bin\Debug\Payroll_1.pdb
+D:\Makers\C#\Week3day3\Payroll_1\Payroll_1\obj\Debug\Payroll_1.csprojResolveAssemblyReference.cache
+D:\Makers\C#\Week3day3\Payroll_1\Payroll_1\obj\Debug\Payroll_1.exe
+D:\Makers\C#\Week3day3\Payroll_1\Payroll_1\obj\Debug\Payroll_1.pdb
