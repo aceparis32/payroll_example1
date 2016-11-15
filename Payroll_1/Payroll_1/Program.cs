@@ -72,8 +72,6 @@ namespace Payroll_1
         //variable
         public float hourlyRate;
         public int hWorked;
-        public string name;
-        public float rate;
 
         //properties
         public float TotalPay
@@ -117,8 +115,8 @@ namespace Payroll_1
 
         public Staff(string name, float rate)
         {
-            NameOfStaff = this.name;
-            hourlyRate = this.rate;
+            this.NameOfStaff = name;
+            this.hourlyRate = rate;
         }
 
 
@@ -221,7 +219,7 @@ namespace Payroll_1
             string path = "Staff.txt";
             string[] separator = { ", " };
             int i = 2;
-            if (File.Exists(path))
+            if (File.Exists(@"Staff.txt"))
             {
                 using (StreamReader sr = new StreamReader(path))
                 {
@@ -229,25 +227,25 @@ namespace Payroll_1
                     while (!sr.EndOfStream)
                     {
                         s = sr.ReadLine();
-                        Console.WriteLine(sr.EndOfStream.ToString());
                         result = s.Split(separator,StringSplitOptions.None);
-                        if(result[1].GetType() == typeof(Manager))
+
+                        if (result[1] == "Manager")
                         {
                             Manager manager = new Manager(result[0]);
                             myStaff.Add(manager);
-                        }else if(result[1].GetType() == typeof(Admin))
+                        }else if(result[1] == "Admin")
                         {
                             Admin admin = new Admin(result[0]);
                             myStaff.Add(admin);
                         }
-                        sr.Close();
                     }
+                    sr.Close();
                 }
             }else
             {
                 Console.WriteLine("File Not Found!");
             }
-
+            
             return myStaff;
 
         }
@@ -309,15 +307,16 @@ namespace Payroll_1
             var result = from s in myStaff
                          where s.HoursWorked < 10
                          orderby s
-                         select s;
+                         select new {s.NameOfStaff, s.HoursWorked };
+           
             Console.WriteLine("Staff with less than 10 working hours");
 
             foreach(Staff f in myStaff)
             {
                 StreamWriter sw = new StreamWriter(path);
-                foreach(var s in result)
+                foreach(var r in result)
                 {
-                    sw.WriteLine("Name of Staff : " + s.NameOfStaff + ", Hours Worked : " + s.HoursWorked);
+                    sw.WriteLine("Name of Staff : " + r.NameOfStaff + ", Hours Worked : " + r.HoursWorked);
                 }
                 sw.Close();
             }

@@ -1,0 +1,11 @@
+PAYSLIP FOR JUN 2015
+======================
+Name of Staff : John
+Hours Worked : 0
+
+Basic Pay0
+Overtime : 0
+
+======================
+Total Pay : 0
+======================

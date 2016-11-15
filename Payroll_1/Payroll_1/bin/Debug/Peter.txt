@@ -1,0 +1,11 @@
+PAYSLIP FOR JUN 2015
+======================
+Name of Staff : Peter
+Hours Worked : 0
+
+Basic Pay0
+Allowance : 0
+
+======================
+Total Pay : 0
+======================
