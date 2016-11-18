@@ -1,11 +1,11 @@
-PAYSLIP FOR JUN 2015
+PAYSLIP FOR JAN 2017
 ======================
 Name of Staff : John
-Hours Worked : 0
+Hours Worked : 180
 
-Basic Pay0
-Overtime : 0
+Basic Pay5400
+Overtime : 310
 
 ======================
-Total Pay : 0
+Total Pay : 5710
 ======================

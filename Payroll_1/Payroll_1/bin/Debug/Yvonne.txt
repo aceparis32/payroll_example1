@@ -1,11 +1,11 @@
-PAYSLIP FOR JUN 2015
+PAYSLIP FOR JAN 2017
 ======================
 Name of Staff : Yvonne
-Hours Worked : 150
+Hours Worked : 180
 
-Basic Pay7500
+Basic Pay9000
 Allowance : 1000
 
 ======================
-Total Pay : 7500
+Total Pay : 10000
 ======================

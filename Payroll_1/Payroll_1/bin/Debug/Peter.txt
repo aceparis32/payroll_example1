@@ -1,11 +1,11 @@
-PAYSLIP FOR JUN 2015
+PAYSLIP FOR JAN 2017
 ======================
 Name of Staff : Peter
-Hours Worked : 0
+Hours Worked : 100
 
-Basic Pay0
-Allowance : 0
+Basic Pay5000
+Allowance : 1000
 
 ======================
-Total Pay : 0
+Total Pay : 5000
 ======================

@@ -197,7 +197,7 @@ namespace Payroll_1
 
             if(HoursWorked > 160)
             {
-                Overtime = Overtime * (HoursWorked - 160);
+                Overtime = overtimeRate * (HoursWorked - 160);
                 TotalPay = TotalPay + Overtime;
             }
         }
@@ -306,19 +306,19 @@ namespace Payroll_1
             string path = "Summary.txt";
             var result = from s in myStaff
                          where s.HoursWorked < 10
-                         orderby s
-                         select new {s.NameOfStaff, s.HoursWorked };
-           
+                         orderby s.NameOfStaff ascending
+                         select new { s.NameOfStaff, s.HoursWorked };
+            Console.WriteLine(result.ToString());
+
             Console.WriteLine("Staff with less than 10 working hours");
 
-            foreach(Staff f in myStaff)
+            foreach (var f in result)
             {
                 StreamWriter sw = new StreamWriter(path);
-                foreach(var r in result)
-                {
-                    sw.WriteLine("Name of Staff : " + r.NameOfStaff + ", Hours Worked : " + r.HoursWorked);
-                }
+
+                sw.WriteLine("Name of Staff : " + f.NameOfStaff + ", Hours Worked : " + f.HoursWorked);
                 sw.Close();
+
             }
         }
 
